@@ -1,0 +1,56 @@
+{% extends '@Fineprint/layout.html.twig' %}
+{% trans_default_domain 'fineprint' %}
+{% block fineprint_content %}
+{% block fineprint_intro %}
+<p>{{ 'legal_notice.intro'|trans({'%site%': site.name, '%url%': site.url}) }}</p>
+{% endblock %}
+
+{% block fineprint_publisher %}
+<section class="fineprint-section">
+    <h2>{{ 'legal_notice.publisher.heading'|trans }}</h2>
+    <p>
+        <strong>{{ publisher.legal_name }}</strong>, {{ publisher.legal_form }}<br>
+        {{ 'legal_notice.publisher.siret'|trans }} {{ publisher.siret }}<br>
+        {% if publisher.registration %}{{ 'legal_notice.publisher.registration'|trans }} {{ publisher.registration }}<br>{% endif %}
+        {% if publisher.share_capital %}{{ 'legal_notice.publisher.share_capital'|trans }} {{ publisher.share_capital }}<br>{% endif %}
+        {% if publisher.vat_number %}{{ 'legal_notice.publisher.vat'|trans }} {{ publisher.vat_number }}<br>{% endif %}
+        {{ 'legal_notice.publisher.address'|trans }} {{ publisher.address }}<br>
+        {{ 'legal_notice.publisher.email'|trans }} <a href="mailto:{{ publisher.email }}">{{ publisher.email }}</a>
+        {% if publisher.phone %}<br>{{ 'legal_notice.publisher.phone'|trans }} {{ publisher.phone }}{% endif %}
+    </p>
+    <p>{{ 'legal_notice.director'|trans }} {{ publisher.publication_director }}</p>
+</section>
+{% endblock %}
+
+{% block fineprint_host %}
+<section class="fineprint-section">
+    <h2>{{ 'legal_notice.host.heading'|trans }}</h2>
+    <p>{{ host.name }}<br>{{ host.address }}<br>{{ 'legal_notice.publisher.phone'|trans }} {{ host.phone }}</p>
+</section>
+{% endblock %}
+
+{% block fineprint_ip %}
+<section class="fineprint-section">
+    <h2>{{ 'legal_notice.ip.heading'|trans }}</h2>
+    <p>{{ 'legal_notice.ip.body'|trans }}</p>
+</section>
+{% endblock %}
+
+{% block fineprint_data %}
+{% set data_pages = ['privacy', 'cookies']|filter(target => fineprint_url(target, locale)) %}
+{% if data_pages is not empty %}
+<section class="fineprint-section">
+    <h2>{{ 'legal_notice.data.heading'|trans }}</h2>
+    <p>{{ 'legal_notice.data.body'|trans }}
+        {% for target in data_pages %}{{ include('@Fineprint/_page_link.html.twig') }}{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block fineprint_contact %}
+<section class="fineprint-section">
+    <h2>{{ 'legal_notice.contact.heading'|trans }}</h2>
+    <p>{{ 'legal_notice.contact.body'|trans }} <a href="mailto:{{ publisher.email }}">{{ publisher.email }}</a>.</p>
+</section>
+{% endblock %}
+{% endblock %}

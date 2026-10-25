@@ -1,0 +1,63 @@
+# Fineprint — the legal pages of this site. Every fact below is published as written:
+# replace each "CHANGE ME" before going live. Reference: vendor/acencyril/fineprint-bundle/README.md
+fineprint:
+    site:
+        name: 'CHANGE ME'
+        url: 'https://example.com'
+
+    publisher:                                  # loi pour la confiance dans l'économie numérique
+        legal_name: 'CHANGE ME'                 # company name, or first and last name
+        legal_form: 'CHANGE ME'                 # e.g. entrepreneur individuel (micro-entreprise), SAS
+        siret: '00000000000000'
+        # registration: 'RCS Paris 000 000 000' # companies on a register
+        # share_capital: '1 000 €'              # companies with share capital
+        # vat_number: 'FR00000000000'
+        address: 'CHANGE ME'
+        email: 'contact@example.com'
+        # phone: '+33 0 00 00 00 00'            # the LCEN asks professional publishers for one
+        publication_director: 'CHANGE ME'
+
+    host:
+        name: 'CHANGE ME'
+        address: 'CHANGE ME'
+        phone: 'CHANGE ME'
+
+    # Required when you sell to consumers (terms.audience: b2c or both).
+    # mediator:
+    #     name: 'CHANGE ME'
+    #     url: 'https://example.com'
+
+    # parent_template: 'base.html.twig'         # must define the "title" and "body" blocks
+
+    # pages:
+    #     terms: false                          # switch a page off
+    #     privacy:
+    #         path: { fr: 'confidentialite', en: 'privacy' }
+    #         last_updated: '2026-01-01'
+
+    terms:
+        audience: b2b                           # b2b, b2c or both
+        # vat_exempt: true                      # TVA non applicable, art. 293 B du CGI
+        # payment_provider: 'Stripe'
+        # digital_services: true
+        # subscriptions: { cancellation: { fr: 'depuis votre espace client.', en: 'from your account page.' } }
+        # immediate_digital_content: true
+        # liability_limits: true
+        # court: 'Paris'
+
+    privacy:
+        # processors:
+        #     mail: { name: 'CHANGE ME', role: email, country: 'France' }
+        activities:
+            - purpose: { fr: 'Sécurité du site (journaux du serveur)', en: 'Site security (server logs)' }
+              data: { fr: 'adresse IP, pages demandées, date', en: 'IP address, pages requested, date' }
+              legal_basis: legitimate_interests
+              legitimate_interest: { fr: 'protéger le site contre les attaques', en: 'protecting the site from attacks' }
+              retention: { fr: 'CHANGE ME', en: 'CHANGE ME' }
+              processors: [host]
+
+    cookies:
+        list:
+            - name: 'PHPSESSID'
+              purpose: { fr: 'Session, nécessaire aux formulaires', en: 'Session, needed by forms' }
+              duration: { fr: 'Fin de la session', en: 'End of session' }

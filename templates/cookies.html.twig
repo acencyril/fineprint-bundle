@@ -1,0 +1,44 @@
+{% extends '@Fineprint/layout.html.twig' %}
+{% trans_default_domain 'fineprint' %}
+{% set ck = fineprint.cookies %}
+{% set only_essential = ck.list|filter(c => c.type != 'essential') is empty %}
+{% block fineprint_content %}
+{% block fineprint_intro %}
+<p>{{ 'cookies.intro'|trans({'%site%': site.name}) }}</p>
+<p>{{ 'cookies.rule'|trans }}</p>
+{% endblock %}
+
+{% block fineprint_list %}
+<section class="fineprint-section">
+    <h2>{{ 'cookies.list.heading'|trans }}</h2>
+    {% if ck.list is empty %}
+        <p>{{ 'cookies.list.none'|trans }}</p>
+    {% else %}
+        <p>{{ (only_essential ? 'cookies.list.only_essential' : 'cookies.list.consent')|trans }}</p>
+        <table>
+            <thead><tr>
+                <th>{{ 'cookies.list.name'|trans }}</th><th>{{ 'cookies.list.purpose'|trans }}</th><th>{{ 'cookies.list.type'|trans }}</th><th>{{ 'cookies.list.duration'|trans }}</th>
+            </tr></thead>
+            <tbody>
+            {% for c in ck.list %}
+                <tr>
+                    <td><code>{{ c.name }}</code>{% if c.provider %}<br>{{ c.provider }}{% endif %}</td>
+                    <td>{{ c.purpose|fineprint_text(locale) }}</td>
+                    <td>{{ ('cookies.type.' ~ c.type)|trans }}</td>
+                    <td>{{ c.duration|fineprint_text(locale) }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% if ck.manage_url %}<p>{{ 'cookies.list.manage'|trans }} <a href="{{ ck.manage_url }}">{{ 'cookies.list.manage_link'|trans }}</a>.</p>{% endif %}
+    {% endif %}
+</section>
+{% endblock %}
+
+{% block fineprint_browser %}
+<section class="fineprint-section">
+    <h2>{{ 'cookies.browser.heading'|trans }}</h2>
+    <p>{{ 'cookies.browser.body'|trans }}</p>
+</section>
+{% endblock %}
+{% endblock %}

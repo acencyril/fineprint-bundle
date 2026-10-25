@@ -1,0 +1,6 @@
+{#- {{ include('@Fineprint/footer_links.html.twig') }} in your footer. -#}
+<nav class="fineprint-links" aria-label="{{ 'common.nav'|trans({}, 'fineprint') }}">
+    {%- for link in fineprint_links() %}
+        <a href="{{ link.url }}">{{ link.label }}</a>{% if not loop.last %} · {% endif %}
+    {%- endfor %}
+</nav>

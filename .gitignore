@@ -1,0 +1,17 @@
+/vendor/
+/composer.lock
+/.phpunit.cache/
+
+# IDE
+/.idea/
+/.vscode/
+/.fleet/
+*.iml
+
+# systèmes
+.DS_Store
+Thumbs.db
+/vendor/
+/composer.lock
+.phpunit.cache/
+/var/

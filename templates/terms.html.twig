@@ -1,0 +1,122 @@
+{% extends '@Fineprint/layout.html.twig' %}
+{% trans_default_domain 'fineprint' %}
+{% set t = fineprint.terms %}
+{% set consumers = t.audience != 'b2b' %}
+{% set businesses = t.audience != 'b2c' %}
+{% set p = {'%site%': site.name, '%seller%': publisher.legal_name, '%email%': publisher.email} %}
+{% block fineprint_content %}
+{% block fineprint_scope %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.scope.heading'|trans }}</h2>
+    <p>{{ 'terms.scope.body'|trans(p) }}</p>
+    <p>{{ ('terms.scope.audience_' ~ t.audience)|trans }}</p>
+    <p>{{ 'terms.scope.seller'|trans(p) }} {{ include('@Fineprint/_page_link.html.twig', {target: 'legal_notice'}) }}.</p>
+</section>
+{% endblock %}
+
+{% block fineprint_order %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.order.heading'|trans }}</h2>
+    <p>{{ 'terms.order.body'|trans }}</p>
+</section>
+{% endblock %}
+
+{% block fineprint_price %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.price.heading'|trans }}</h2>
+    <p>{% if t.vat_exempt %}{{ 'terms.price.vat_exempt'|trans }}{% else %}{{ ('terms.price.' ~ t.audience)|trans }}{% endif %}</p>
+    <p>{{ 'terms.price.payment'|trans }}{% if t.payment_provider %} {{ 'terms.price.provider'|trans({'%provider%': t.payment_provider}) }}{% endif %}</p>
+    {% if businesses %}<p>{{ 'terms.price.late'|trans }}</p>{% endif %}
+</section>
+{% endblock %}
+
+{% block fineprint_digital %}
+{% if t.digital_services %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.digital.heading'|trans }}</h2>
+    <p>{{ 'terms.digital.body'|trans }}</p>
+    {% if businesses %}<p>{{ 'terms.digital.means'|trans }}</p>{% endif %}
+    <p>{{ 'terms.digital.client'|trans }}</p>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block fineprint_subscriptions %}
+{% if t.subscriptions.enabled %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.subscriptions.heading'|trans }}</h2>
+    <p>{{ 'terms.subscriptions.body'|trans }}</p>
+    {% if t.subscriptions.cancellation %}<p>{{ 'terms.subscriptions.how'|trans }} {{ t.subscriptions.cancellation|fineprint_text(locale) }}</p>{% endif %}
+    {% if consumers %}<p>{{ 'terms.subscriptions.consumers'|trans }}</p>{% endif %}
+</section>
+{% endif %}
+{% endblock %}
+
+{% block fineprint_withdrawal %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.withdrawal.heading'|trans }}</h2>
+    {% if consumers %}
+        <p>{{ 'terms.withdrawal.consumers'|trans(p) }}</p>
+        <p>{{ 'terms.withdrawal.goods'|trans }}</p>
+        <p>{{ 'terms.withdrawal.partial'|trans }}</p>
+        {% if t.immediate_digital_content %}<p>{{ 'terms.withdrawal.waiver'|trans }}</p>{% endif %}
+    {% endif %}
+    {% if businesses %}<p>{{ ('terms.withdrawal.businesses_' ~ (consumers ? 'both' : 'only'))|trans }}</p>{% endif %}
+    {% if consumers %}
+        <h3>{{ 'terms.withdrawal.form.heading'|trans }}</h3>
+        <blockquote class="fineprint-form">
+            <p>{{ 'terms.withdrawal.form.to'|trans }} {{ publisher.legal_name }}, {{ publisher.address }}, {{ publisher.email }}</p>
+            <p>{{ 'terms.withdrawal.form.body'|trans }}</p>
+            <p>{{ 'terms.withdrawal.form.ordered'|trans }}<br>{{ 'terms.withdrawal.form.name'|trans }}<br>{{ 'terms.withdrawal.form.address'|trans }}<br>{{ 'terms.withdrawal.form.signature'|trans }}<br>{{ 'terms.withdrawal.form.date'|trans }}</p>
+            <p>{{ 'terms.withdrawal.form.strike'|trans }}</p>
+        </blockquote>
+    {% endif %}
+</section>
+{% endblock %}
+
+{% block fineprint_guarantees %}
+{% if consumers %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.guarantees.heading'|trans }}</h2>
+    <p>{{ 'terms.guarantees.body'|trans(p) }}</p>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block fineprint_liability %}
+{% if t.liability_limits and businesses %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.liability.heading'|trans }}</h2>
+    <p>{{ 'terms.liability.body'|trans }}</p>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block fineprint_personal_data %}
+{% if fineprint_url('privacy', locale) %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.data.heading'|trans }}</h2>
+    <p>{{ 'terms.data.body'|trans }} {{ include('@Fineprint/_page_link.html.twig', {target: 'privacy'}) }}.</p>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block fineprint_mediation %}
+{% if consumers and mediator %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.mediation.heading'|trans }}</h2>
+    <p>{{ 'terms.mediation.body'|trans }}</p>
+    <p>{{ mediator.name }}{% if mediator.address %}, {{ mediator.address }}{% endif %} — <a href="{{ mediator.url }}" rel="noopener">{{ mediator.url }}</a></p>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block fineprint_law %}
+<section class="fineprint-section">
+    <h2>{{ 'terms.law.heading'|trans }}</h2>
+    <p>{{ 'terms.law.body'|trans }}</p>
+    {% if businesses and t.court %}<p>{{ 'terms.law.court'|trans({'%court%': t.court}) }}</p>{% endif %}
+    {% if consumers %}<p>{{ 'terms.law.consumers'|trans }}</p>{% endif %}
+</section>
+{% endblock %}
+{% endblock %}

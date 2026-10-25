@@ -1,0 +1,179 @@
+# Fineprint — texts in French. The wording is generic: every fact comes from the site's
+# configuration. Legal references are to French law (LCEN, Code de la consommation,
+# Code de commerce, RGPD, loi Informatique et Libertés).
+common:
+    updated: 'Dernière mise à jour : %date%'
+    nav: 'Informations légales'
+    and: 'et'
+
+legal_notice:
+    title: 'Mentions légales'
+    link: 'Mentions légales'
+    link_inline: 'mentions légales'
+    description: 'Mentions légales de %site% : éditeur, hébergeur et contact.'
+    intro: 'Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l''économie numérique, voici les informations sur l''éditeur et l''hébergeur du site %site% (%url%).'
+    publisher:
+        heading: 'Éditeur'
+        siret: 'SIRET :'
+        registration: 'Immatriculation :'
+        share_capital: 'Capital social :'
+        vat: 'N° TVA intracommunautaire :'
+        address: 'Adresse :'
+        email: 'E-mail :'
+        phone: 'Téléphone :'
+    director: 'Directeur de la publication :'
+    host:
+        heading: 'Hébergeur'
+    ip:
+        heading: 'Propriété intellectuelle'
+        body: 'Les contenus de ce site (textes, images, logos, code) sont protégés par le droit de la propriété intellectuelle. Sauf mention contraire, ils appartiennent à l''éditeur ; toute reproduction ou représentation sans son autorisation est interdite.'
+    data:
+        heading: 'Données personnelles'
+        body: 'Pour en savoir plus sur vos données personnelles, voir :'
+    contact:
+        heading: 'Contact'
+        body: 'Pour toute question sur le site, écrivez à'
+
+terms:
+    title: 'Conditions générales de vente'
+    link: 'CGV'
+    link_inline: 'conditions générales de vente'
+    description: 'Conditions générales de vente de %site% : commande, prix, paiement, rétractation, responsabilité et litiges.'
+    scope:
+        heading: 'Objet'
+        body: 'Les présentes conditions générales de vente (CGV) régissent les ventes de produits et de services conclues sur le site %site% entre %seller% (« le vendeur ») et ses clients. Passer commande vaut acceptation des CGV en vigueur au jour de la commande.'
+        audience_b2b: 'Les ventes sont réservées aux professionnels agissant pour les besoins de leur activité.'
+        audience_b2c: 'Les ventes s''adressent aux consommateurs.'
+        audience_both: 'Les ventes s''adressent aux consommateurs comme aux professionnels ; les clauses propres aux uns ou aux autres le précisent.'
+        seller: 'L''identité et les coordonnées du vendeur figurent dans les'
+    order:
+        heading: 'Commande'
+        body: 'Le client choisit les produits ou services, vérifie le détail de sa commande et son prix total, corrige d''éventuelles erreurs, puis confirme sa commande. La commande est ferme une fois le paiement accepté. Le vendeur en accuse réception sans délai par voie électronique.'
+    price:
+        heading: 'Prix et paiement'
+        b2b: 'Les prix sont indiqués en euros hors taxes ; la TVA au taux en vigueur s''y ajoute au moment de la commande.'
+        b2c: 'Les prix sont indiqués en euros, toutes taxes comprises.'
+        both: 'Les prix sont indiqués en euros. Pour les consommateurs, ils s''entendent toutes taxes comprises ; pour les professionnels, la TVA au taux en vigueur s''ajoute aux prix hors taxes.'
+        vat_exempt: 'Les prix sont indiqués en euros. TVA non applicable, article 293 B du Code général des impôts.'
+        payment: 'Le paiement est exigible à la commande. Il se fait en ligne, par les moyens proposés au moment du paiement.'
+        provider: 'Les paiements sont traités par le prestataire de paiement %provider%.'
+        late: 'Pour les clients professionnels, tout retard de paiement entraîne de plein droit des pénalités au taux de trois fois le taux d''intérêt légal et une indemnité forfaitaire pour frais de recouvrement de 40 € (articles L441-10 et D441-5 du Code de commerce).'
+    digital:
+        heading: 'Services numériques'
+        body: 'Les services numériques sont fournis en ligne. Leur accès peut être interrompu momentanément pour maintenance, mise à jour ou raison de sécurité.'
+        means: 'Envers les clients professionnels, le vendeur est tenu à une obligation de moyens.'
+        client: 'Le client utilise les services conformément à leur destination et à la loi, et garde confidentiels ses identifiants de connexion.'
+    subscriptions:
+        heading: 'Abonnements'
+        body: 'Un abonnement est conclu pour la période indiquée lors de la commande et se renouvelle automatiquement pour une période identique, sauf résiliation. Toute modification de prix est annoncée au client avant le renouvellement. Le client peut résilier à tout moment : la résiliation prend effet à la fin de la période en cours, déjà payée, sans remboursement de la période entamée.'
+        how: 'Pour résilier :'
+        consumers: 'Le consommateur peut résilier en ligne, par la fonctionnalité prévue à cet effet (article L215-1-1 du Code de la consommation). Pour un abonnement à durée déterminée reconduit tacitement, le vendeur l''informe, au plus tôt trois mois et au plus tard un mois avant la fin de la période, de sa faculté de ne pas le reconduire (article L215-1 du même code).'
+    withdrawal:
+        heading: 'Droit de rétractation'
+        consumers: 'Le consommateur dispose d''un délai de quatorze jours pour se rétracter, sans avoir à motiver sa décision ni à payer de pénalités (articles L221-18 et suivants du Code de la consommation). Ce délai court à compter de la conclusion du contrat pour un service ou un contenu numérique, et de la réception du bien pour un bien. Pour l''exercer, le consommateur adresse au vendeur, avant l''expiration du délai, une déclaration dénuée d''ambiguïté, par exemple par e-mail à %email% ou au moyen du formulaire ci-dessous. Le vendeur rembourse la totalité des sommes versées au plus tard quatorze jours après avoir été informé de la décision, par le moyen de paiement utilisé pour la commande.'
+        goods: 'Pour un bien, le consommateur le renvoie au plus tard quatorze jours après avoir communiqué sa décision ; les frais de retour sont à sa charge.'
+        partial: 'Si le consommateur a demandé que l''exécution d''un service commence pendant le délai de rétractation et se rétracte avant son achèvement, il paie un montant proportionnel à ce qui a été fourni jusqu''à sa rétractation (article L221-25 du Code de la consommation).'
+        waiver: 'Conformément à l''article L221-28 du Code de la consommation, le droit de rétractation ne peut pas être exercé pour un service pleinement exécuté avant la fin du délai de rétractation, ni pour un contenu numérique fourni sans support matériel, lorsque l''exécution a commencé avec l''accord préalable et exprès du consommateur et que celui-ci a reconnu perdre son droit de rétractation. Cet accord et cette reconnaissance sont recueillis lors de la commande.'
+        businesses_only: 'Les ventes étant conclues entre professionnels, le droit de rétractation prévu par le Code de la consommation ne s''applique pas, sauf dans le cas prévu à l''article L221-3 de ce code.'
+        businesses_both: 'Les clients professionnels ne bénéficient pas de ce droit de rétractation, sauf dans le cas prévu à l''article L221-3 du Code de la consommation.'
+        form:
+            heading: 'Formulaire de rétractation'
+            to: 'À l''attention de'
+            body: 'Je/Nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la vente du bien (*)/pour la prestation de services (*) ci-dessous :'
+            ordered: 'Commandé le (*)/reçu le (*) :'
+            name: 'Nom du (des) consommateur(s) :'
+            address: 'Adresse du (des) consommateur(s) :'
+            signature: 'Signature du (des) consommateur(s) (uniquement en cas de notification du présent formulaire sur papier) :'
+            date: 'Date :'
+            strike: '(*) Rayez la mention inutile.'
+    guarantees:
+        heading: 'Garanties légales'
+        body: 'Le consommateur bénéficie de la garantie légale de conformité (articles L217-3 et suivants du Code de la consommation pour les biens, L224-25-12 et suivants pour les contenus et services numériques) et de la garantie des vices cachés (articles 1641 et suivants du Code civil). Il peut les mettre en œuvre en écrivant à %email%.'
+    liability:
+        heading: 'Responsabilité'
+        body: 'Envers les clients professionnels, la responsabilité du vendeur est limitée au montant payé pour la commande concernée, et le vendeur ne répond pas des dommages indirects (notamment perte de chiffre d''affaires, de clientèle ou de données). Ces limites ne s''appliquent ni en cas de faute lourde ou dolosive, ni aux consommateurs, dont les droits légaux restent entiers.'
+    data:
+        heading: 'Données personnelles'
+        body: 'Les données nécessaires au traitement des commandes sont traitées comme l''indique la'
+    mediation:
+        heading: 'Médiation'
+        body: 'En cas de litige, le consommateur peut recourir gratuitement au médiateur de la consommation dont relève le vendeur, après avoir adressé au vendeur une réclamation écrite (articles L612-1 et suivants du Code de la consommation) :'
+    law:
+        heading: 'Droit applicable et litiges'
+        body: 'Les présentes CGV sont soumises au droit français. Les parties recherchent d''abord une solution amiable.'
+        court: 'Pour les clients professionnels, à défaut de solution amiable, tout litige relève de la compétence exclusive des tribunaux de %court%.'
+        consumers: 'Le consommateur peut saisir, à son choix, l''une des juridictions territorialement compétentes ou celle du lieu où il demeurait au moment de la conclusion du contrat ou de la survenance du fait dommageable (article R631-3 du Code de la consommation).'
+
+privacy:
+    title: 'Politique de confidentialité'
+    link: 'Confidentialité'
+    link_inline: 'politique de confidentialité'
+    description: 'Comment %site% traite vos données personnelles : finalités, bases légales, durées de conservation, sous-traitants et vos droits.'
+    intro: 'Cette page indique quelles données personnelles le site %site% traite, pour quelles finalités, pendant combien de temps, et comment exercer vos droits, conformément au règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 (Informatique et Libertés).'
+    controller:
+        heading: 'Responsable du traitement'
+        contact: 'Contact :'
+        dpo: 'Délégué à la protection des données :'
+    activities:
+        heading: 'Traitements'
+        data: 'Données'
+        basis: 'Base légale'
+        interest: 'Intérêt légitime poursuivi'
+        retention: 'Durée de conservation'
+        processors: 'Sous-traitants'
+    basis:
+        consent: 'Votre consentement (article 6.1.a du RGPD), que vous pouvez retirer à tout moment'
+        contract: 'L''exécution d''un contrat ou de mesures précontractuelles prises à votre demande (article 6.1.b du RGPD)'
+        legal_obligation: 'Le respect d''une obligation légale (article 6.1.c du RGPD)'
+        vital_interests: 'La sauvegarde de vos intérêts vitaux ou de ceux d''une autre personne (article 6.1.d du RGPD)'
+        public_task: 'L''exécution d''une mission d''intérêt public (article 6.1.e du RGPD)'
+        legitimate_interests: 'Notre intérêt légitime (article 6.1.f du RGPD)'
+    role:
+        hosting: 'hébergement'
+        email: 'envoi des e-mails'
+        payment: 'paiement en ligne'
+        ai: 'traitement par intelligence artificielle'
+        analytics: 'mesure d''audience'
+        other: 'prestataire technique'
+    processors:
+        heading: 'Sous-traitants'
+        intro: 'Les prestataires suivants traitent des données pour notre compte, selon nos instructions :'
+        transfer: 'Transfert hors de l''Espace économique européen, encadré par :'
+    rights:
+        heading: 'Vos droits'
+        body: 'Vous disposez d''un droit d''accès, de rectification, d''effacement, de limitation du traitement, d''opposition et de portabilité de vos données (articles 15 à 21 du RGPD). Lorsqu''un traitement repose sur votre consentement, vous pouvez le retirer à tout moment, sans remettre en cause le traitement fait auparavant. Vous pouvez aussi définir des directives sur le sort de vos données après votre décès (article 85 de la loi Informatique et Libertés).'
+        exercise: 'Pour exercer ces droits, écrivez à'
+        delay: 'Nous répondons dans un délai d''un mois, qui peut être prolongé de deux mois pour une demande complexe. En cas de doute raisonnable sur votre identité, un justificatif peut vous être demandé.'
+    complaint:
+        heading: 'Réclamation'
+        body: 'Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la Commission nationale de l''informatique et des libertés (CNIL), 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 :'
+    cookies:
+        heading: 'Cookies'
+        body: 'Les cookies déposés par le site sont décrits sur la page'
+
+cookies:
+    title: 'Cookies'
+    link: 'Cookies'
+    link_inline: 'cookies'
+    description: 'Les cookies utilisés par %site%, à quoi ils servent et comment les refuser.'
+    intro: 'Un cookie est un petit fichier enregistré sur votre appareil lorsque vous consultez un site. Cette page indique ceux qu''utilise %site%.'
+    rule: 'Les cookies strictement nécessaires au fonctionnement du site, ou à un service que vous demandez expressément, sont dispensés de consentement (article 82 de la loi Informatique et Libertés). Les autres ne sont déposés qu''avec votre accord, que vous pouvez retirer à tout moment, aussi facilement que vous l''avez donné.'
+    list:
+        heading: 'Les cookies de ce site'
+        none: 'Ce site ne dépose aucun cookie.'
+        only_essential: 'Ce site n''utilise que des cookies strictement nécessaires : aucun consentement ne vous est demandé.'
+        consent: 'Les cookies qui ne sont pas strictement nécessaires ne sont déposés qu''après votre accord.'
+        name: 'Nom'
+        purpose: 'Finalité'
+        type: 'Catégorie'
+        duration: 'Durée'
+        manage: 'Vous pouvez modifier vos choix à tout moment :'
+        manage_link: 'gérer mes cookies'
+    type:
+        essential: 'Strictement nécessaire'
+        preferences: 'Préférences'
+        analytics: 'Mesure d''audience'
+        marketing: 'Publicité'
+    browser:
+        heading: 'Paramétrer votre navigateur'
+        body: 'Vous pouvez aussi bloquer ou supprimer les cookies depuis les réglages de votre navigateur. Bloquer les cookies strictement nécessaires peut empêcher certaines fonctions du site, comme la connexion ou l''envoi de formulaires.'

@@ -1,0 +1,26 @@
+{#- A bare page, used until the site sets fineprint.parent_template to its own layout. -#}
+<!DOCTYPE html>
+<html lang="{{ locale|default('fr') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% endblock %}">
+    {% block stylesheets %}
+    <style>
+        body { margin: 0; font: 16px/1.6 system-ui, sans-serif; color: #1d1d1f; background: #fff; }
+        .fineprint { max-width: 46rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+        .fineprint table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+        .fineprint th, .fineprint td { text-align: left; padding: .4rem .5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+        .fineprint dt { font-weight: 600; margin-top: .5rem; }
+        .fineprint dd { margin: 0 0 .25rem; }
+        .fineprint blockquote { margin: 1rem 0; padding: .5rem 1rem; border-left: 3px solid #ccc; }
+        .fineprint-updated { color: #666; font-size: .9rem; margin-top: 2rem; }
+        @media (prefers-color-scheme: dark) { body { color: #eee; background: #111; } .fineprint th, .fineprint td { border-color: #333; } }
+    </style>
+    {% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>

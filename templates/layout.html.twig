@@ -1,0 +1,21 @@
+{#-
+    Every page extends this layout, which extends fineprint.parent_template (the site's
+    base). The parent must define "title" and "body"; if yours uses other block names,
+    override this file in templates/bundles/FineprintBundle/layout.html.twig.
+-#}
+{% extends parent_template %}
+{% trans_default_domain 'fineprint' %}
+{% block title %}{{ (page ~ '.title')|trans }} — {{ site.name }}{% endblock %}
+{% block description %}{{ (page ~ '.description')|trans({'%site%': site.name}) }}{% endblock %}
+{% block body %}
+<main class="fineprint fineprint-{{ page|replace({'_': '-'}) }}" lang="{{ locale }}">
+    <h1>{% block fineprint_title %}{{ (page ~ '.title')|trans }}{% endblock %}</h1>
+    {% block fineprint_content %}{% endblock %}
+    {% block fineprint_extra %}{{ include('@Fineprint/_extra_sections.html.twig') }}{% endblock %}
+    {% block fineprint_footer %}
+        {% if fineprint.pages[page].last_updated %}
+            <p class="fineprint-updated">{{ 'common.updated'|trans({'%date%': fineprint.pages[page].last_updated}) }}</p>
+        {% endif %}
+    {% endblock %}
+</main>
+{% endblock %}
