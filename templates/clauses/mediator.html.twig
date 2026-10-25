@@ -1,0 +1,2 @@
+<p>{{ 'terms.mediation.body'|trans(params, domain) }}</p>
+{% if mediator %}<p>{{ mediator.name }}{% if mediator.address %}, {{ mediator.address }}{% endif %} — <a href="{{ mediator.url }}" rel="noopener">{{ mediator.url }}</a></p>{% endif %}

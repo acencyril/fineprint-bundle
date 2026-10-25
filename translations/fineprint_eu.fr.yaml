@@ -1,0 +1,182 @@
+# Pack "eu", en français. Rédaction générique pour tout État membre de l'UE, qui ne cite
+# que le droit de l'Union : le site indique sa loi applicable et son pays.
+page:
+    legal_notice: { title: 'Mentions légales', link: 'Mentions légales', link_inline: 'mentions légales', description: 'Mentions légales de %site% : prestataire, contact et hébergement.' }
+    terms: { title: 'Conditions générales de vente', link: 'CGV', link_inline: 'conditions générales de vente', description: 'Conditions générales de vente de %site% : commande, prix, paiement, rétractation, responsabilité et litiges.' }
+    privacy: { title: 'Politique de confidentialité', link: 'Confidentialité', link_inline: 'politique de confidentialité', description: 'Comment %site% traite vos données personnelles : finalités, bases légales, durées de conservation, sous-traitants et vos droits.' }
+    cookies: { title: 'Cookies', link: 'Cookies', link_inline: 'cookies', description: 'Les cookies utilisés par %site%, à quoi ils servent et comment les refuser.' }
+
+label:
+    company_id: 'N° d''entreprise :'
+    registration: 'Registre du commerce :'
+    share_capital: 'Capital social :'
+    vat: 'N° de TVA :'
+    address: 'Adresse :'
+    email: 'E-mail :'
+    phone: 'Téléphone :'
+    director: 'Responsable du contenu :'
+    contact: 'Contact :'
+    dpo: 'Délégué à la protection des données :'
+
+legal_notice:
+    intro: 'Informations sur le prestataire du site %site% (%url%), conformément à l''article 5 de la directive 2000/31/CE sur le commerce électronique.'
+    publisher: { title: 'Prestataire' }
+    host: { title: 'Hébergement' }
+    intellectual_property:
+        title: 'Propriété intellectuelle'
+        body: 'Les contenus de ce site (textes, images, logos, code) sont protégés par le droit de la propriété intellectuelle. Sauf mention contraire, ils appartiennent au prestataire ; toute reproduction ou représentation sans son autorisation est interdite.'
+    personal_data:
+        title: 'Données personnelles'
+        body: 'Le traitement de vos données personnelles et les cookies sont décrits dans la'
+    contact:
+        title: 'Contact'
+        body: 'Pour toute question sur le site, écrivez à'
+
+terms:
+    scope:
+        title: 'Objet'
+        body: 'Les présentes conditions générales de vente (CGV) régissent les ventes de produits et de services conclues sur le site %site% entre %seller% (« le vendeur ») et ses clients. Passer commande vaut acceptation des CGV en vigueur au jour de la commande.'
+    audience:
+        b2b: 'Les ventes sont réservées aux professionnels agissant pour les besoins de leur activité.'
+        b2c: 'Les ventes s''adressent aux consommateurs.'
+        both: 'Les ventes s''adressent aux consommateurs comme aux professionnels ; les clauses propres aux uns ou aux autres le précisent.'
+    seller:
+        body: 'L''identité et les coordonnées du vendeur figurent dans les'
+    marketplace:
+        title: 'Place de marché'
+        body: |
+            Le site %site% met aussi en relation des acheteurs et des vendeurs tiers. Lorsqu'une offre provient d'un vendeur tiers, le contrat de vente est conclu directement entre l'acheteur et ce vendeur, qui est alors « le vendeur » au sens des présentes CGV.
+
+            Chaque offre indique si le vendeur est un professionnel ou non. Lorsqu'il ne l'est pas, les droits que le droit de l'Union accorde aux consommateurs ne s'appliquent pas au contrat conclu avec lui. Principaux paramètres de classement des offres : %ranking% (directive 2011/83/UE, article 6 bis).
+    order:
+        title: 'Commande'
+        body: 'Le client choisit les produits ou services, vérifie le détail de sa commande et son prix total, corrige d''éventuelles erreurs, puis confirme sa commande. La commande est ferme une fois le paiement accepté. Le vendeur en accuse réception sans délai injustifié par voie électronique.'
+    price:
+        title: 'Prix et paiement'
+        b2b: 'Les prix sont indiqués hors TVA ; la TVA au taux applicable s''y ajoute au moment de la commande.'
+        b2c: 'Les prix comprennent la TVA et toutes les autres taxes.'
+        both: 'Les prix affichés aux consommateurs comprennent la TVA et toutes les autres taxes ; pour les professionnels, la TVA au taux applicable s''ajoute aux prix hors TVA.'
+    payment:
+        body: 'Le paiement est exigible à la commande. Il se fait en ligne, par les moyens proposés au moment du paiement.'
+        provider: 'Les paiements sont traités par le prestataire de paiement %provider%.'
+        late: 'Pour les clients professionnels, tout retard de paiement entraîne de plein droit des intérêts au taux légal et une indemnité forfaitaire d''au moins 40 € pour frais de recouvrement (directive 2011/7/UE).'
+    digital:
+        title: 'Services numériques'
+        body: 'Les services numériques sont fournis en ligne. Leur accès peut être interrompu momentanément pour maintenance, mise à jour ou raison de sécurité.'
+        client: 'Le client utilise les services conformément à leur destination et à la loi, et garde confidentiels ses identifiants de connexion.'
+    services:
+        title: 'Prestations de services'
+        body: 'Les prestations sont exécutées conformément à la description acceptée lors de la commande, dans les délais qui y sont indiqués. Le client fournit en temps utile les informations nécessaires à leur exécution.'
+        means: 'Envers les clients professionnels, le vendeur s''engage à y apporter le soin et la diligence raisonnables, sans obligation de résultat.'
+    delivery:
+        title: 'Livraison'
+        body: 'Les biens sont livrés à l''adresse indiquée lors de la commande, dans le délai annoncé avant la commande.'
+        consumers: 'Pour le consommateur, sauf autre délai convenu, le bien est livré au plus tard trente jours après la conclusion du contrat. À défaut, le consommateur peut fixer un délai supplémentaire adapté aux circonstances et, faute de livraison dans ce délai, mettre fin au contrat. Le risque de perte ou d''endommagement du bien lui est transféré lorsqu''il en prend physiquement possession, ou qu''un tiers désigné par lui, autre que le transporteur, le fait (directive 2011/83/UE, articles 18 et 20).'
+    subscription:
+        title: 'Abonnements'
+        body: 'Un abonnement est conclu pour la période indiquée lors de la commande et se renouvelle automatiquement pour une période identique, sauf résiliation. Toute modification de prix est annoncée au client avant le renouvellement. Le client peut résilier à tout moment : la résiliation prend effet à la fin de la période en cours, déjà payée, sans remboursement de la période entamée.'
+        how: 'Pour résilier : %cancellation%'
+    withdrawal:
+        title: 'Droit de rétractation'
+        body: 'Le consommateur dispose d''un délai de quatorze jours pour se rétracter, sans avoir à motiver sa décision (directive 2011/83/UE, articles 9 à 16). Ce délai court à compter de la conclusion du contrat pour un service ou un contenu numérique, et de la réception du bien pour un bien. Pour l''exercer, le consommateur informe le vendeur de sa décision par une déclaration dénuée d''ambiguïté avant l''expiration du délai, par exemple par e-mail à %email% ou au moyen du formulaire ci-dessous. Le vendeur rembourse tous les paiements reçus, frais de livraison standard compris, sans retard excessif et au plus tard quatorze jours après avoir été informé, par le moyen de paiement utilisé pour la commande.'
+        goods: 'Pour un bien, le consommateur le renvoie au plus tard quatorze jours après avoir communiqué sa décision et supporte les frais directs de renvoi. Le vendeur peut différer le remboursement jusqu''à réception du bien ou d''une preuve de son expédition.'
+        partial: 'Si le consommateur a demandé que l''exécution d''un service commence pendant le délai de rétractation, il paie un montant proportionnel à ce qui a été fourni jusqu''à sa rétractation (directive 2011/83/UE, article 14, paragraphe 3).'
+        waiver: 'Le droit de rétractation ne s''applique ni à un service pleinement exécuté, ni à un contenu numérique fourni sans support matériel, lorsque l''exécution a commencé avec l''accord préalable et exprès du consommateur, qui a reconnu perdre alors son droit de rétractation (directive 2011/83/UE, article 16, points a et m). Cet accord et cette reconnaissance sont recueillis lors de la commande.'
+        businesses_only: 'Les ventes étant conclues entre professionnels, le droit de rétractation des consommateurs ne s''applique pas.'
+        businesses_also: 'Les clients professionnels ne bénéficient pas de ce droit de rétractation.'
+    withdrawal_form:
+        title: 'Modèle de formulaire de rétractation'
+        to: 'À l''attention de'
+        body: 'Je/Nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la vente du bien (*)/pour la prestation de services (*) ci-dessous :'
+        ordered: 'Commandé le (*)/reçu le (*) :'
+        name: 'Nom du (des) consommateur(s) :'
+        address: 'Adresse du (des) consommateur(s) :'
+        signature: 'Signature du (des) consommateur(s) (uniquement en cas de notification du présent formulaire sur papier) :'
+        date: 'Date :'
+        strike: '(*) Biffez la mention inutile.'
+    guarantees:
+        title: 'Garanties légales'
+        goods: 'Pour les biens, le consommateur bénéficie de la garantie légale de conformité pendant au moins deux ans à compter de la livraison (directive (UE) 2019/771, telle qu''appliquée par le droit national).'
+        digital: 'Pour les contenus et services numériques, il bénéficie de la garantie légale de conformité de la directive (UE) 2019/770, telle qu''appliquée par le droit national.'
+        how: 'Il peut mettre en œuvre ces garanties en écrivant à %email%.'
+    liability:
+        title: 'Responsabilité'
+        body: 'Envers les clients professionnels, la responsabilité du vendeur est limitée au montant payé pour la commande concernée, et le vendeur ne répond pas des dommages indirects (notamment perte de chiffre d''affaires, de clientèle ou de données). Ces limites ne s''appliquent ni lorsque la loi interdit de limiter la responsabilité, notamment en cas de faute intentionnelle ou de faute lourde, ni aux consommateurs, dont les droits légaux restent entiers.'
+    personal_data:
+        title: 'Données personnelles'
+        body: 'Les données nécessaires au traitement des commandes sont traitées comme l''indique la'
+    mediation:
+        title: 'Règlement extrajudiciaire des litiges'
+        body: 'Le consommateur peut soumettre un litige à l''organisme de règlement extrajudiciaire suivant (directive 2013/11/UE) :'
+    law:
+        title: 'Droit applicable et litiges'
+        body: 'Les présentes CGV sont soumises au droit du pays suivant : %law%. Les parties recherchent d''abord une solution amiable.'
+        court: 'Pour les clients professionnels, à défaut de solution amiable, les tribunaux de %court% sont seuls compétents.'
+        consumers: 'Ce choix de loi ne prive pas le consommateur de la protection des dispositions impératives de la loi du pays où il a sa résidence habituelle (règlement (CE) n° 593/2008, article 6). Le consommateur domicilié dans l''Union peut aussi saisir les juridictions de son domicile (règlement (UE) n° 1215/2012, article 18).'
+
+privacy:
+    intro: 'Cette page indique quelles données personnelles le site %site% traite, pour quelles finalités, pendant combien de temps, et comment exercer vos droits, conformément au règlement (UE) 2016/679, le règlement général sur la protection des données (RGPD).'
+    controller: { title: 'Responsable du traitement' }
+    processing:
+        title: 'Traitements'
+        data: 'Données'
+        basis: 'Base légale'
+        interest: 'Intérêt légitime poursuivi'
+        retention: 'Durée de conservation'
+        processors: 'Sous-traitants'
+    basis:
+        consent: 'Votre consentement (article 6.1.a du RGPD), que vous pouvez retirer à tout moment'
+        contract: 'L''exécution d''un contrat ou de mesures précontractuelles prises à votre demande (article 6.1.b du RGPD)'
+        legal_obligation: 'Le respect d''une obligation légale (article 6.1.c du RGPD)'
+        vital_interests: 'La sauvegarde de vos intérêts vitaux ou de ceux d''une autre personne (article 6.1.d du RGPD)'
+        public_task: 'L''exécution d''une mission d''intérêt public (article 6.1.e du RGPD)'
+        legitimate_interests: 'Notre intérêt légitime (article 6.1.f du RGPD)'
+    role:
+        hosting: 'hébergement'
+        email: 'envoi des e-mails'
+        payment: 'paiement en ligne'
+        ai: 'traitement par intelligence artificielle'
+        analytics: 'mesure d''audience'
+        other: 'prestataire technique'
+    processors:
+        title: 'Sous-traitants'
+        intro: 'Les prestataires suivants traitent des données pour notre compte, selon nos instructions :'
+        transfer: 'Transfert hors de l''Espace économique européen (RGPD, chapitre V), encadré par :'
+    rights:
+        title: 'Vos droits'
+        body: |
+            Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation du traitement, d'opposition et de portabilité de vos données (articles 15 à 21 du RGPD). Lorsqu'un traitement repose sur votre consentement, vous pouvez le retirer à tout moment, sans remettre en cause le traitement fait auparavant (article 7, paragraphe 3, du RGPD).
+
+            Pour exercer ces droits, écrivez à %contact%. Nous répondons dans un délai d'un mois, qui peut être prolongé de deux mois pour une demande complexe (article 12, paragraphe 3, du RGPD). En cas de doute raisonnable sur votre identité, un justificatif peut vous être demandé.
+    complaint:
+        title: 'Réclamation'
+        body: 'Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès d''une autorité de contrôle, notamment dans l''État membre de votre résidence habituelle, de votre lieu de travail ou du lieu de la violation alléguée (article 77 du RGPD).'
+        authority: 'Notre autorité de contrôle chef de file est %authority%, %authority_url%.'
+    cookies:
+        title: 'Cookies'
+        body: 'Les cookies déposés par le site sont décrits sur la page'
+
+cookies:
+    intro: |
+        Un cookie est un petit fichier enregistré sur votre appareil lorsque vous consultez un site. Cette page indique ceux qu'utilise %site%.
+
+        Les cookies strictement nécessaires au fonctionnement du site, ou à un service que vous demandez expressément, sont dispensés de consentement (directive 2002/58/CE, article 5, paragraphe 3). Les autres ne sont déposés qu'avec votre accord, que vous pouvez retirer à tout moment, aussi facilement que vous l'avez donné.
+    list:
+        title: 'Les cookies de ce site'
+        none: 'Ce site ne dépose aucun cookie.'
+        only_essential: 'Ce site n''utilise que des cookies strictement nécessaires : aucun consentement ne vous est demandé.'
+        consent: 'Les cookies qui ne sont pas strictement nécessaires ne sont déposés qu''après votre accord.'
+        name: 'Nom'
+        purpose: 'Finalité'
+        type: 'Catégorie'
+        duration: 'Durée'
+        manage: 'Vous pouvez modifier vos choix à tout moment :'
+        manage_link: 'gérer mes cookies'
+    type:
+        essential: 'Strictement nécessaire'
+        preferences: 'Préférences'
+        analytics: 'Mesure d''audience'
+        marketing: 'Publicité'
+    browser:
+        title: 'Paramétrer votre navigateur'
+        body: 'Vous pouvez aussi bloquer ou supprimer les cookies depuis les réglages de votre navigateur. Bloquer les cookies strictement nécessaires peut empêcher certaines fonctions du site, comme la connexion ou l''envoi de formulaires.'

@@ -15,9 +15,39 @@ final class Fineprint
     {
     }
 
+    /**
+     * Derived values, computed once at build time: the processors as the pages list them
+     * (the host first, when it is one) and the section overrides in their long form.
+     */
+    public static function prepare(array $config): array
+    {
+        $list = [];
+        $host = $config['host'];
+        if ($config['privacy']['host_is_processor'] && null !== $host['name'] && '' !== $host['name']) {
+            $list['host'] = ['name' => $host['name'], 'role' => 'hosting', 'country' => null, 'outside_eu' => false, 'description' => null, 'safeguards' => null];
+        }
+        $config['privacy']['processor_list'] = $list + $config['privacy']['processors'];
+
+        foreach (self::PAGES as $page) {
+            foreach ($config['pages'][$page]['sections']['override'] as $id => $o) {
+                if (\is_string($o)) {
+                    $o = str_ends_with($o, '.twig') ? ['template' => $o] : ['body' => $o];
+                }
+                $config['pages'][$page]['sections']['override'][$id] = $o + ['body' => null, 'template' => null, 'title' => null, 'domain' => 'messages'];
+            }
+        }
+
+        return $config;
+    }
+
     public function config(): array
     {
         return $this->config;
+    }
+
+    public function jurisdiction(): string
+    {
+        return $this->config['jurisdiction'];
     }
 
     /** @return list<string> */

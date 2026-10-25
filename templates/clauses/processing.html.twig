@@ -1,0 +1,11 @@
+{%- set processors = fineprint.privacy.processor_list -%}
+{% for a in fineprint.privacy.processing %}
+    <h3>{{ a.purpose|fineprint_text(locale) }}</h3>
+    <dl class="fineprint-activity">
+        {% if a.data %}<dt>{{ 'privacy.processing.data'|trans({}, domain) }}</dt><dd>{{ a.data|fineprint_text(locale) }}</dd>{% endif %}
+        <dt>{{ 'privacy.processing.basis'|trans({}, domain) }}</dt><dd>{{ ('privacy.basis.' ~ a.legal_basis)|trans({}, domain) }}</dd>
+        {% if a.legitimate_interest %}<dt>{{ 'privacy.processing.interest'|trans({}, domain) }}</dt><dd>{{ a.legitimate_interest|fineprint_text(locale) }}</dd>{% endif %}
+        <dt>{{ 'privacy.processing.retention'|trans({}, domain) }}</dt><dd>{{ a.retention|fineprint_text(locale) }}</dd>
+        {% if a.processors %}<dt>{{ 'privacy.processing.processors'|trans({}, domain) }}</dt><dd>{% for id in a.processors %}{{ processors[id].name }}{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endif %}
+    </dl>
+{% endfor %}

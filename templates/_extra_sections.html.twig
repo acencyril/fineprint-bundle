@@ -1,8 +1,0 @@
-{% for section in fineprint.pages[page].sections %}
-<section class="fineprint-section fineprint-extra">
-    <h2>{{ section.title|fineprint_text(locale) }}</h2>
-    {% for paragraph in section.body|fineprint_text(locale)|fineprint_paragraphs %}
-        <p>{{ paragraph|nl2br }}</p>
-    {% endfor %}
-</section>
-{% endfor %}

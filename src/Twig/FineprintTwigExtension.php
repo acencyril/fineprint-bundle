@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Acencyril\FineprintBundle\Twig;
 
+use Acencyril\FineprintBundle\Assembly\Assembler;
 use Acencyril\FineprintBundle\Fineprint;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -22,6 +23,7 @@ final class FineprintTwigExtension extends AbstractExtension
 {
     public function __construct(
         private readonly Fineprint $fineprint,
+        private readonly Assembler $assembler,
         private readonly UrlGeneratorInterface $urls,
         private readonly TranslatorInterface $translator,
         private readonly RequestStack $requests,
@@ -39,7 +41,7 @@ final class FineprintTwigExtension extends AbstractExtension
     public function getFilters(): array
     {
         return [
-            new TwigFilter('fineprint_paragraphs', static fn (?string $v) => null === $v ? [] : array_values(array_filter(array_map('trim', preg_split('/\R\s*\R/', $v)), static fn (string $p) => '' !== $p))),
+            new TwigFilter('fineprint_paragraphs', Assembler::paragraphs(...)),
             new TwigFilter('fineprint_text', fn (mixed $v, ?string $locale = null) => $this->fineprint->text($v, $locale ?? $this->locale())),
         ];
     }
@@ -49,10 +51,11 @@ final class FineprintTwigExtension extends AbstractExtension
     {
         $locale = $this->fineprint->resolveLocale($locale ?? $this->locale());
         $links = [];
+        $domain = $this->assembler->domain();
         foreach ($this->fineprint->enabledPages() as $page) {
             $links[] = [
                 'page' => $page,
-                'label' => $this->translator->trans($page.'.link', [], 'fineprint', $locale),
+                'label' => $this->translator->trans('page.'.$page.'.link', [], $domain, $locale),
                 'url' => $this->urls->generate($this->fineprint->routeName($page), ['_locale' => $locale]),
             ];
         }

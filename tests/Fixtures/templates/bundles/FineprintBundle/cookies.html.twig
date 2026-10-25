@@ -1,3 +1,3 @@
-{# Overrides the bundle's cookies page the Symfony way, keeping its layout and blocks. #}
+{# Overrides the bundle's cookies page the Symfony way, keeping its sections. #}
 {% extends '@!Fineprint/cookies.html.twig' %}
-{% block fineprint_browser %}<p id="overridden">Site-specific browser advice.</p>{% endblock %}
+{% block fineprint_extra %}<p id="overridden">Site-specific browser advice.</p>{% endblock %}

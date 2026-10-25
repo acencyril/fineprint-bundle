@@ -1,0 +1,9 @@
+{%- set anchor = section.id|replace({'_': '-'}) -%}
+<section class="fineprint-section fineprint-{{ anchor }}{{ section.title is null ? ' fineprint-continued' }}" id="{{ anchor }}">
+    {% if section.title is not null %}<h2>{{ section.title }}</h2>{% endif %}
+    {% if section.template %}{{ include(section.template) }}{% endif %}
+    {% for paragraph in section.paragraphs %}
+        <p>{{ paragraph|nl2br }}
+            {%- if loop.last and section.link %} {% if section.link.url %}<a href="{{ section.link.url }}">{{ section.link.label }}</a>{% else %}{{ section.link.label }}{% endif %}.{% endif %}</p>
+    {% endfor %}
+</section>

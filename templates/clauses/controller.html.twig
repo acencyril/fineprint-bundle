@@ -1,0 +1,4 @@
+{%- set contact = fineprint.privacy.contact_email ?: publisher.email -%}
+<p>{{ fineprint.privacy.controller ?: publisher.legal_name }}, {{ publisher.address }}{% if publisher.country %}, {{ publisher.country }}{% endif %}<br>
+    {{ 'label.contact'|trans({}, domain) }} <a href="mailto:{{ contact }}">{{ contact }}</a>
+    {% if fineprint.privacy.dpo_email %}<br>{{ 'label.dpo'|trans({}, domain) }} <a href="mailto:{{ fineprint.privacy.dpo_email }}">{{ fineprint.privacy.dpo_email }}</a>{% endif %}</p>

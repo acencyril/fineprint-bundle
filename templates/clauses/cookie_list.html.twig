@@ -1,0 +1,22 @@
+{%- set ck = fineprint.cookies -%}
+{% if ck.list is empty %}
+    <p>{{ 'cookies.list.none'|trans({}, domain) }}</p>
+{% else %}
+    <p>{{ (ck.list|filter(c => c.type != 'essential') is empty ? 'cookies.list.only_essential' : 'cookies.list.consent')|trans({}, domain) }}</p>
+    <table>
+        <thead><tr>
+            <th>{{ 'cookies.list.name'|trans({}, domain) }}</th><th>{{ 'cookies.list.purpose'|trans({}, domain) }}</th><th>{{ 'cookies.list.type'|trans({}, domain) }}</th><th>{{ 'cookies.list.duration'|trans({}, domain) }}</th>
+        </tr></thead>
+        <tbody>
+        {% for c in ck.list %}
+            <tr>
+                <td><code>{{ c.name }}</code>{% if c.provider %}<br>{{ c.provider }}{% endif %}</td>
+                <td>{{ c.purpose|fineprint_text(locale) }}</td>
+                <td>{{ ('cookies.type.' ~ c.type)|trans({}, domain) }}</td>
+                <td>{{ c.duration|fineprint_text(locale) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% if ck.manage_url %}<p>{{ 'cookies.list.manage'|trans({}, domain) }} <a href="{{ ck.manage_url }}">{{ 'cookies.list.manage_link'|trans({}, domain) }}</a>.</p>{% endif %}
+{% endif %}

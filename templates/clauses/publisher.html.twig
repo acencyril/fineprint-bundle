@@ -1,0 +1,11 @@
+<p>
+    <strong>{{ publisher.legal_name }}</strong>, {{ publisher.legal_form }}<br>
+    {% if publisher.company_id %}{{ 'label.company_id'|trans({}, domain) }} {{ publisher.company_id }}<br>{% endif %}
+    {% if publisher.registration %}{{ 'label.registration'|trans({}, domain) }} {{ publisher.registration }}<br>{% endif %}
+    {% if publisher.share_capital %}{{ 'label.share_capital'|trans({}, domain) }} {{ publisher.share_capital }}<br>{% endif %}
+    {% if publisher.vat_number %}{{ 'label.vat'|trans({}, domain) }} {{ publisher.vat_number }}<br>{% endif %}
+    {{ 'label.address'|trans({}, domain) }} {{ publisher.address }}{% if publisher.country %}, {{ publisher.country }}{% endif %}<br>
+    {{ 'label.email'|trans({}, domain) }} <a href="mailto:{{ publisher.email }}">{{ publisher.email }}</a>
+    {% if publisher.phone %}<br>{{ 'label.phone'|trans({}, domain) }} {{ publisher.phone }}{% endif %}
+</p>
+{% if publisher.publication_director %}<p>{{ 'label.director'|trans({}, domain) }} {{ publisher.publication_director }}</p>{% endif %}

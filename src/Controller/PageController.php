@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Acencyril\FineprintBundle\Controller;
 
+use Acencyril\FineprintBundle\Assembly\Assembler;
 use Acencyril\FineprintBundle\Fineprint;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,8 +13,11 @@ use Twig\Environment;
 
 final class PageController
 {
-    public function __construct(private readonly Fineprint $fineprint, private readonly Environment $twig)
-    {
+    public function __construct(
+        private readonly Fineprint $fineprint,
+        private readonly Assembler $assembler,
+        private readonly Environment $twig,
+    ) {
     }
 
     public function __invoke(Request $request, string $page): Response
@@ -27,6 +31,9 @@ final class PageController
         $response = new Response($this->twig->render('@Fineprint/'.$page.'.html.twig', [
             'page' => $page,
             'locale' => $locale,
+            'domain' => $this->assembler->domain(),
+            'params' => $this->assembler->params($locale),
+            'sections' => $this->assembler->sections($page, $locale),
             'fineprint' => $config,
             'site' => $config['site'],
             'publisher' => $config['publisher'],

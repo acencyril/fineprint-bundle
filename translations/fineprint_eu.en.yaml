@@ -1,0 +1,182 @@
+# Pack "eu", in English. Generic wording for any EU member state, citing EU law only:
+# the site states its governing law and country. Every fact comes from its configuration.
+page:
+    legal_notice: { title: 'Legal notice', link: 'Legal notice', link_inline: 'legal notice', description: 'Legal notice of %site%: provider, contact and hosting.' }
+    terms: { title: 'Terms of sale', link: 'Terms of sale', link_inline: 'terms of sale', description: 'Terms of sale of %site%: ordering, prices, payment, withdrawal, liability and disputes.' }
+    privacy: { title: 'Privacy policy', link: 'Privacy', link_inline: 'privacy policy', description: 'How %site% processes your personal data: purposes, legal bases, retention periods, processors and your rights.' }
+    cookies: { title: 'Cookies', link: 'Cookies', link_inline: 'cookies', description: 'The cookies %site% uses, what they are for and how to refuse them.' }
+
+label:
+    company_id: 'Company number:'
+    registration: 'Trade register:'
+    share_capital: 'Share capital:'
+    vat: 'VAT number:'
+    address: 'Address:'
+    email: 'Email:'
+    phone: 'Phone:'
+    director: 'Responsible for content:'
+    contact: 'Contact:'
+    dpo: 'Data protection officer:'
+
+legal_notice:
+    intro: 'Information about the provider of %site% (%url%), as required by Directive 2000/31/EC on electronic commerce, article 5.'
+    publisher: { title: 'Provider' }
+    host: { title: 'Hosting' }
+    intellectual_property:
+        title: 'Intellectual property'
+        body: 'The content of this site (texts, images, logos, code) is protected by intellectual property law. Unless stated otherwise, it belongs to the provider; any reproduction or display without the provider''s permission is forbidden.'
+    personal_data:
+        title: 'Personal data'
+        body: 'How your personal data is processed, and the cookies, are described in the'
+    contact:
+        title: 'Contact'
+        body: 'For any question about the site, write to'
+
+terms:
+    scope:
+        title: 'Scope'
+        body: 'These terms of sale govern the sales of products and services made on %site% between %seller% (“the seller”) and its clients. Placing an order means accepting the terms in force on the day of the order.'
+    audience:
+        b2b: 'Sales are reserved for businesses acting for the purposes of their trade.'
+        b2c: 'Sales are made to consumers.'
+        both: 'Sales are made to consumers and businesses alike; clauses specific to either say so.'
+    seller:
+        body: 'The seller''s identity and contact details are given in the'
+    marketplace:
+        title: 'Marketplace'
+        body: |
+            %site% also connects buyers with third-party sellers. When an offer comes from a third-party seller, the contract of sale is concluded directly between the buyer and that seller, who is then “the seller” within these terms.
+
+            Each offer states whether the seller is a trader or not. When the seller is not a trader, the consumer rights stemming from EU consumer protection law do not apply to the contract made with them. Main parameters ranking the offers: %ranking% (Directive 2011/83/EU, article 6a).
+    order:
+        title: 'Ordering'
+        body: 'The client chooses the products or services, checks the order''s details and total price, corrects any errors, then confirms the order. The order is final once payment is accepted. The seller acknowledges it without undue delay by electronic means.'
+    price:
+        title: 'Prices and payment'
+        b2b: 'Prices are stated excluding VAT; VAT at the applicable rate is added when ordering.'
+        b2c: 'Prices include VAT and all other taxes.'
+        both: 'Prices shown to consumers include VAT and all other taxes; for businesses, VAT at the applicable rate is added to the prices excluding VAT.'
+    payment:
+        body: 'Payment is due when ordering. It is made online, by the means offered at checkout.'
+        provider: 'Payments are processed by the payment provider %provider%.'
+        late: 'For business clients, any late payment automatically incurs interest at the statutory rate and a fixed compensation of at least €40 for recovery costs (Directive 2011/7/EU).'
+    digital:
+        title: 'Digital services'
+        body: 'Digital services are provided online. Access may be briefly interrupted for maintenance, updates or security reasons.'
+        client: 'The client uses the services for their intended purpose and in accordance with the law, and keeps its login details confidential.'
+    services:
+        title: 'Services'
+        body: 'Services are performed as described in the order accepted by the client, within the time stated in it. The client provides in good time the information needed to perform them.'
+        means: 'Towards business clients, the seller undertakes to use reasonable care and skill, not to achieve a particular result.'
+    delivery:
+        title: 'Delivery'
+        body: 'Goods are delivered to the address given when ordering, within the time stated before the order.'
+        consumers: 'For consumers, unless another time was agreed, goods are delivered no later than thirty days after the contract is concluded. If they are not, the consumer may set an additional period appropriate to the circumstances and, failing delivery within it, terminate the contract. The risk of loss or damage passes to the consumer when the consumer, or a third party the consumer designated other than the carrier, takes physical possession of the goods (Directive 2011/83/EU, articles 18 and 20).'
+    subscription:
+        title: 'Subscriptions'
+        body: 'A subscription is taken out for the period stated when ordering and renews automatically for the same period unless cancelled. Any price change is announced to the client before the renewal. The client may cancel at any time: cancellation takes effect at the end of the current period, already paid, with no refund of the period started.'
+        how: 'To cancel: %cancellation%'
+    withdrawal:
+        title: 'Right of withdrawal'
+        body: 'Consumers have fourteen days to withdraw from the contract without giving any reason (Directive 2011/83/EU, articles 9 to 16). The period runs from the conclusion of the contract for services and digital content, and from receipt for goods. To withdraw, the consumer informs the seller of the decision by an unequivocal statement before the period ends, for instance by email to %email% or with the form below. The seller reimburses all payments received, including standard delivery costs, without undue delay and no later than fourteen days after being informed, using the means of payment used for the order.'
+        goods: 'For goods, the consumer sends them back no later than fourteen days after communicating the decision and bears the direct cost of returning them. The seller may withhold the reimbursement until it has received the goods back or proof that they were sent.'
+        partial: 'If the consumer asked for a service to begin during the withdrawal period, the consumer pays an amount in proportion to what was provided until the withdrawal (Directive 2011/83/EU, article 14(3)).'
+        waiver: 'The right of withdrawal does not apply to a service fully performed, nor to digital content not supplied on a tangible medium, where performance began with the consumer''s prior express consent and acknowledgement that the right would then be lost (Directive 2011/83/EU, article 16(a) and (m)). This consent and acknowledgement are collected when ordering.'
+        businesses_only: 'As sales are made between businesses, the consumer right of withdrawal does not apply.'
+        businesses_also: 'Business clients do not have this right of withdrawal.'
+    withdrawal_form:
+        title: 'Model withdrawal form'
+        to: 'To:'
+        body: 'I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract of sale of the following goods (*)/for the provision of the following service (*):'
+        ordered: 'Ordered on (*)/received on (*):'
+        name: 'Name of consumer(s):'
+        address: 'Address of consumer(s):'
+        signature: 'Signature of consumer(s) (only if this form is notified on paper):'
+        date: 'Date:'
+        strike: '(*) Delete as appropriate.'
+    guarantees:
+        title: 'Legal guarantees'
+        goods: 'For goods, consumers benefit from the legal guarantee of conformity for at least two years from delivery (Directive (EU) 2019/771, as applied by national law).'
+        digital: 'For digital content and services, they benefit from the legal guarantee of conformity of Directive (EU) 2019/770, as applied by national law.'
+        how: 'They can invoke these guarantees by writing to %email%.'
+    liability:
+        title: 'Liability'
+        body: 'Towards business clients, the seller''s liability is limited to the amount paid for the order concerned, and the seller is not liable for indirect damage (including loss of revenue, customers or data). These limits do not apply where the law forbids limiting liability, such as for intent or gross negligence, nor to consumers, whose statutory rights remain in full.'
+    personal_data:
+        title: 'Personal data'
+        body: 'The data needed to process orders is handled as described in the'
+    mediation:
+        title: 'Alternative dispute resolution'
+        body: 'Consumers may refer a dispute to the following alternative dispute resolution body (Directive 2013/11/EU):'
+    law:
+        title: 'Governing law and disputes'
+        body: 'These terms are governed by the law of %law%. The parties first seek an amicable solution.'
+        court: 'For business clients, failing an amicable solution, the courts of %court% have exclusive jurisdiction.'
+        consumers: 'This choice of law does not deprive consumers of the protection of the mandatory provisions of the law of the country where they habitually reside (Regulation (EC) No 593/2008, article 6). Consumers domiciled in the EU may also bring proceedings before the courts of their domicile (Regulation (EU) No 1215/2012, article 18).'
+
+privacy:
+    intro: 'This page explains which personal data %site% processes, for what purposes, for how long, and how to exercise your rights, under Regulation (EU) 2016/679, the General Data Protection Regulation (GDPR).'
+    controller: { title: 'Data controller' }
+    processing:
+        title: 'Processing activities'
+        data: 'Data'
+        basis: 'Legal basis'
+        interest: 'Legitimate interest pursued'
+        retention: 'Retention period'
+        processors: 'Processors'
+    basis:
+        consent: 'Your consent (GDPR, article 6(1)(a)), which you may withdraw at any time'
+        contract: 'The performance of a contract, or of steps taken at your request before entering into one (GDPR, article 6(1)(b))'
+        legal_obligation: 'Compliance with a legal obligation (GDPR, article 6(1)(c))'
+        vital_interests: 'Protecting your vital interests or those of another person (GDPR, article 6(1)(d))'
+        public_task: 'The performance of a task carried out in the public interest (GDPR, article 6(1)(e))'
+        legitimate_interests: 'Our legitimate interests (GDPR, article 6(1)(f))'
+    role:
+        hosting: 'hosting'
+        email: 'sending emails'
+        payment: 'online payment'
+        ai: 'artificial intelligence processing'
+        analytics: 'audience measurement'
+        other: 'technical provider'
+    processors:
+        title: 'Processors'
+        intro: 'The following providers process data on our behalf, following our instructions:'
+        transfer: 'Transfer outside the European Economic Area (GDPR, chapter V), framed by:'
+    rights:
+        title: 'Your rights'
+        body: |
+            You have the right to access, rectify and erase your data, to restrict or object to its processing, and to data portability (GDPR, articles 15 to 21). Where processing rests on your consent, you may withdraw it at any time, without affecting the processing carried out before (GDPR, article 7(3)).
+
+            To exercise these rights, write to %contact%. We answer within one month, which may be extended by two months for a complex request (GDPR, article 12(3)). If we have reasonable doubts about your identity, we may ask for proof.
+    complaint:
+        title: 'Complaints'
+        body: 'If you believe your rights are not respected, you may lodge a complaint with a supervisory authority, in particular in the EU member state of your habitual residence, your place of work or the alleged infringement (GDPR, article 77).'
+        authority: 'Our lead supervisory authority is %authority%, %authority_url%.'
+    cookies:
+        title: 'Cookies'
+        body: 'The cookies the site sets are described on the page'
+
+cookies:
+    intro: |
+        A cookie is a small file stored on your device when you visit a site. This page lists the ones %site% uses.
+
+        Cookies strictly necessary for the site to work, or for a service you explicitly ask for, are exempt from consent (Directive 2002/58/EC, article 5(3)). Others are set only with your consent, which you may withdraw at any time, as easily as you gave it.
+    list:
+        title: 'Cookies on this site'
+        none: 'This site sets no cookies.'
+        only_essential: 'This site only uses strictly necessary cookies: no consent is asked of you.'
+        consent: 'Cookies that are not strictly necessary are set only after your consent.'
+        name: 'Name'
+        purpose: 'Purpose'
+        type: 'Category'
+        duration: 'Duration'
+        manage: 'You can change your choices at any time:'
+        manage_link: 'manage my cookies'
+    type:
+        essential: 'Strictly necessary'
+        preferences: 'Preferences'
+        analytics: 'Audience measurement'
+        marketing: 'Advertising'
+    browser:
+        title: 'Browser settings'
+        body: 'You can also block or delete cookies in your browser''s settings. Blocking strictly necessary cookies may prevent some features of the site from working, such as signing in or sending forms.'

@@ -13,13 +13,22 @@ abstract class KernelTestCase extends WebTestCase
 {
     protected static function createKernel(array $options = []): KernelInterface
     {
-        return new TestKernel($options['environment'] ?? 'test', true, $options['fineprint'] ?? []);
+        return new TestKernel($options['environment'] ?? 'test', true, $options['fineprint'] ?? [], $options['replace'] ?? false);
     }
 
+    /** Settings merged on top of the base configuration. */
     protected static function browse(array $fineprint = [], string $environment = 'test'): KernelBrowser
     {
         self::ensureKernelShutdown();
 
         return static::createClient(['environment' => $environment, 'fineprint' => $fineprint]);
+    }
+
+    /** A whole configuration of its own. */
+    protected static function browseWith(array $config): KernelBrowser
+    {
+        self::ensureKernelShutdown();
+
+        return static::createClient(['fineprint' => $config, 'replace' => true]);
     }
 }

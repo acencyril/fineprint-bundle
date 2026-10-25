@@ -1,0 +1,7 @@
+<p>{{ 'privacy.processors.intro'|trans({}, domain) }}</p>
+<ul>
+{% for id, pr in fineprint.privacy.processor_list %}
+    <li><strong>{{ pr.name }}</strong>{% if pr.country %} ({{ pr.country }}){% endif %} — {{ ('privacy.role.' ~ pr.role)|trans({}, domain) }}{% if pr.description %}. {{ pr.description|fineprint_text(locale) }}{% endif %}
+        {% if pr.outside_eu %}<br>{{ 'privacy.processors.transfer'|trans({}, domain) }} {{ pr.safeguards|fineprint_text(locale) }}{% endif %}</li>
+{% endfor %}
+</ul>

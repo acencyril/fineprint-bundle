@@ -1,7 +1,7 @@
 {
     "name": "acencyril/fineprint-bundle",
     "type": "symfony-bundle",
-    "description": "Legal pages for Symfony sites, written once and correct for French law: legal notice, terms of sale, privacy policy, cookies, in French and English.",
+    "description": "Legal pages for Symfony sites, assembled from jurisdiction packs (France, EU) and your activities: legal notice, terms of sale, privacy policy, cookies, in French and English.",
     "keywords": [
         "symfony",
         "legal",
@@ -10,7 +10,8 @@
         "mentions-legales",
         "cgv",
         "privacy-policy",
-        "cookies"
+        "cookies",
+        "eu"
     ],
     "license": "MIT",
     "authors": [
@@ -37,7 +38,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "0.1.x-dev"
+            "dev-main": "0.2.x-dev"
         }
     },
     "minimum-stability": "stable",

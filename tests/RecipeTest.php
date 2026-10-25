@@ -4,23 +4,27 @@ declare(strict_types=1);
 
 namespace Acencyril\FineprintBundle\Tests;
 
-use Acencyril\FineprintBundle\DependencyInjection\Configuration;
+use Acencyril\FineprintBundle\Assembly\Validator;
+use Acencyril\FineprintBundle\Pack\Eu\EuPack;
+use Acencyril\FineprintBundle\Pack\Fr\FrPack;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Yaml\Yaml;
 
-/** Flex clears the cache right after installing: the recipe's configuration must be valid. */
+/** Flex clears the cache right after installing: the recipe's configuration must pass its pack. */
 final class RecipeTest extends TestCase
 {
     private const DIR = __DIR__.'/../recipe';
 
+    private static function assertValid(array $yaml, string $where): void
+    {
+        $config = ConfigurationTest::process($yaml['fineprint']);
+        $pack = ['fr' => new FrPack(), 'eu' => new EuPack()][$config['jurisdiction']];
+        self::assertSame([], Validator::errors($pack, $config), $where);
+    }
+
     public function testTheRecipeConfigurationIsValid(): void
     {
-        $yaml = Yaml::parseFile(self::DIR.'/config/packages/fineprint.yaml');
-        $config = (new Processor())->processConfiguration(new Configuration(), [$yaml['fineprint']]);
-
-        self::assertSame('b2b', $config['terms']['audience']);
-        self::assertStringContainsString('CHANGE ME', $config['publisher']['legal_name']);
+        self::assertValid(Yaml::parseFile(self::DIR.'/config/packages/fineprint.yaml'), 'recipe');
     }
 
     public function testTheReadmeExamplesAreValid(): void
@@ -29,9 +33,8 @@ final class RecipeTest extends TestCase
             preg_match_all('/```yaml\n((?:#[^\n]*\n)*fineprint:\n.*?)```/s', file_get_contents(__DIR__.'/../'.$file), $m);
             $blocks = array_filter($m[1], static fn (string $b) => str_contains($b, '    site:'));
             self::assertNotEmpty($blocks, $file);
-            foreach ($blocks as $block) {
-                $config = (new Processor())->processConfiguration(new Configuration(), [Yaml::parse($block)['fineprint']]);
-                self::assertNotEmpty($config['privacy']['activities'], $file);
+            foreach ($blocks as $i => $block) {
+                self::assertValid(Yaml::parse($block), $file.' example '.$i);
             }
         }
     }

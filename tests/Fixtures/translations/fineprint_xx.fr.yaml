@@ -1,0 +1,11 @@
+page:
+    legal_notice: { title: 'XX imprint fr', link: 'Imprint', link_inline: 'imprint', description: 'XX' }
+    terms: { title: 'XX terms fr', link: 'Terms', link_inline: 'terms', description: 'XX' }
+    privacy: { title: 'XX privacy fr', link: 'Privacy', link_inline: 'privacy', description: 'XX' }
+    cookies: { title: 'XX cookies fr', link: 'Cookies', link_inline: 'cookies', description: 'XX' }
+imprint: { title: 'Imprint', body: 'Published by %seller% under the law of %law%.' }
+terms: { title: 'XX terms', b2b: 'XX business terms.', b2c: 'XX consumer terms.' }
+privacy: { body: 'XX privacy text.' }
+cookies:
+    list: { none: 'none', only_essential: 'XX essential only', consent: 'c', name: 'n', purpose: 'p', type: 't', duration: 'd', manage: 'm', manage_link: 'ml' }
+    type: { essential: 'XX essential', preferences: 'p', analytics: 'a', marketing: 'm' }

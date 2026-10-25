@@ -1,0 +1,8 @@
+{#- The assembled sections of a page, in order. Each one renders through _section.html.twig. -#}
+{% extends '@Fineprint/layout.html.twig' %}
+{% block fineprint_content %}
+    {% block fineprint_sections %}
+        {% for section in sections %}{{ include('@Fineprint/_section.html.twig') }}{% endfor %}
+    {% endblock %}
+    {% block fineprint_extra %}{% endblock %}
+{% endblock %}
