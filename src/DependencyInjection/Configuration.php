@@ -284,9 +284,11 @@ final class Configuration implements ConfigurationInterface
     private function localized(string $name, bool $required = false): NodeDefinition
     {
         $node = new VariableNodeDefinition($name);
-        $node->defaultNull();
+        // Symfony 8 refuses a node that is both required and has a default value.
         if ($required) {
             $node->isRequired();
+        } else {
+            $node->defaultNull();
         }
         $node->validate()
             ->ifTrue(static function ($v) use ($required) {

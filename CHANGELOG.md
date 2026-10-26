@@ -6,6 +6,13 @@ versioning follows [SemVer](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.1] — 2026-10-26
+
+### Fixed
+- Symfony 8: required texts (a section's `title`, a processing's `purpose` and `retention`,
+  a cookie's `purpose` and `duration`) no longer also carry a default value, which Symfony 8
+  refuses ("cannot be required and have a default value").
+
 ## [0.2.0] — 2026-10-25
 
 Fineprint becomes a clause assembler. The 0.1 configuration is replaced: see

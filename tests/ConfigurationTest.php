@@ -106,4 +106,21 @@ final class ConfigurationTest extends TestCase
 
         self::process($config);
     }
+
+    /** Symfony 8 refuses a node that is both required and has a default value (7.4 deprecates it). */
+    public function testTheTreeBuildsWithoutConfigDeprecations(): void
+    {
+        $deprecations = [];
+        set_error_handler(static function (int $level, string $message) use (&$deprecations): bool {
+            $deprecations[] = $message;
+
+            return true;
+        }, \E_USER_DEPRECATED);
+        try {
+            (new Configuration())->getConfigTreeBuilder()->buildTree();
+        } finally {
+            restore_error_handler();
+        }
+        self::assertSame([], $deprecations);
+    }
 }
