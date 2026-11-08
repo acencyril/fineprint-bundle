@@ -15,6 +15,8 @@ mention your law requires is missing.
 composer require acencyril/fineprint-bundle
 ```
 
+PHP 8.1+, Symfony 6.4, 7 or 8.
+
 > **Not legal advice.** Fineprint writes generic, correct wording around the facts you
 > declare. It certifies nothing. Have your pages reviewed by a lawyer before you rely
 > on them, and add the terms particular to your business.
@@ -306,10 +308,12 @@ The Symfony way, in `templates/bundles/FineprintBundle/`:
 
 ## Flex recipe
 
-The recipe lives in [`recipe/`](recipe), in the format of
-[symfony/recipes-contrib](https://github.com/symfony/recipes-contrib), ready to be
-submitted as `acencyril/fineprint-bundle/0.2/`. Until it is merged, Flex will not apply
-it: follow the "Without Flex" steps and copy `recipe/config/` into your `config/`.
+The recipe is published in
+[symfony/recipes-contrib](https://github.com/symfony/recipes-contrib/tree/main/acencyril/fineprint-bundle)
+(a copy lives in [`recipe/`](recipe)). Flex applies contrib recipes only when the project
+allows them (`composer config extra.symfony.allow-contrib true`, or answer yes when
+Composer asks). Otherwise, follow the "Without Flex" steps and copy `recipe/config/` into
+your `config/`.
 
 ## Tests
 

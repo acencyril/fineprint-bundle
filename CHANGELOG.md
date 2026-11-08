@@ -6,6 +6,15 @@ versioning follows [SemVer](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- `SECURITY.md`: vulnerabilities are reported privately through GitHub (Security → Report
+  a vulnerability), with the answer and fix times, what is in scope, the PHP and Symfony
+  lines and the versioning policy.
+- CI tests the oldest and newest PHP and Symfony lines `composer.json` accepts (PHP 8.1 with
+  Symfony 6.4 up to PHP 8.5 with Symfony 8) and runs `composer audit` on the dependencies.
+- README: the supported PHP and Symfony lines, and how to configure Fineprint when Flex does
+  not apply the contrib recipe.
+
 ## [0.2.1] — 2026-10-26
 
 ### Fixed
@@ -67,3 +76,8 @@ Fineprint becomes a clause assembler. The 0.1 configuration is replaced: see
 - `FineprintUrls`: the enabled pages' URLs, for a sitemap.
 - Flex recipe in `recipe/`.
 - Tests (PHPUnit) and CI.
+
+[Unreleased]: https://github.com/acencyril/fineprint-bundle/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/acencyril/fineprint-bundle/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/acencyril/fineprint-bundle/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/acencyril/fineprint-bundle/releases/tag/v0.1.0

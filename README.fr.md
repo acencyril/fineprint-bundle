@@ -15,6 +15,8 @@ avec vos faits, et refuse de construire si une mention exigée par votre droit m
 composer require acencyril/fineprint-bundle
 ```
 
+PHP 8.1+, Symfony 6.4, 7 ou 8.
+
 > **Ce n'est pas un conseil juridique.** Fineprint rédige un texte générique et correct
 > autour des faits que vous déclarez. Il ne certifie rien. Faites relire vos pages par
 > un juriste avant de vous y fier, et ajoutez les conditions propres à votre activité.
@@ -217,11 +219,12 @@ La 0.2 remplace la configuration : voir le tableau de correspondance dans le
 
 ## Recette Flex
 
-La recette est dans [`recipe/`](recipe), au format de
-[symfony/recipes-contrib](https://github.com/symfony/recipes-contrib), prête à être
-proposée sous `acencyril/fineprint-bundle/0.2/`. Tant qu'elle n'est pas acceptée, Flex ne
-l'applique pas : suivez l'installation sans Flex et copiez `recipe/config/` dans votre
-`config/`.
+La recette est publiée dans
+[symfony/recipes-contrib](https://github.com/symfony/recipes-contrib/tree/main/acencyril/fineprint-bundle)
+(une copie est dans [`recipe/`](recipe)). Flex n'applique les recettes contrib que si le
+projet les autorise (`composer config extra.symfony.allow-contrib true`, ou répondez oui
+quand Composer le demande). Sinon, suivez l'installation sans Flex et copiez
+`recipe/config/` dans votre `config/`.
 
 ## Tests
 
